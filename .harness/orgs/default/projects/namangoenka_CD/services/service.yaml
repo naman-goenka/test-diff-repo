@@ -3,3 +3,18 @@ service:
   identifier: service
   orgIdentifier: default
   projectIdentifier: namangoenka_CD
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: gcpAuto
+                imagePath: qa-target/todolist-sample
+                tag: <+input>
+                digest: ""
+                registryHostname: us.gcr.io
+              identifier: a
+              type: Gcr
+    type: Kubernetes
