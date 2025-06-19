@@ -11,7 +11,7 @@ service:
           sources:
             - spec:
                 connectorRef: gcpAuto
-                imagePath: <+project.description>
+                imagePath: qa-target/todolist-sample
                 tag: <+input>
                 digest: ""
                 registryHostname: us.gcr.io
